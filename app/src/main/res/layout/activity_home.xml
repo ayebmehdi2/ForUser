@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#F5F5F5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Home">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/a" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#212121"
+            android:alpha=".4"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="45dp"
+            android:layout_margin="16dp"
+            android:id="@+id/photo"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_gravity="end"
+            android:layout_height="45dp"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:id="@+id/avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="200dp"
+            android:text="AVATAR"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:background="@drawable/back_login_bottom"/>
+
+        <Button
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:textColor="#FFF"
+            android:layout_margin="16dp"
+            android:id="@+id/myscore"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_height="45dp"
+            android:text="my score"
+            android:background="@drawable/back_button_yellow"
+            />
+
+        <Button
+            android:id="@+id/mygifts"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/back_button_yellow"
+            android:text="my gifts"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/myscore"
+            app:layout_constraintStart_toEndOf="@+id/myscore"
+            app:layout_constraintTop_toTopOf="@+id/myscore" />
+
+        <Button
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="32dp"
+            android:layout_width="160dp"
+            android:textColor="#FFF"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_height="60dp"
+            android:id="@+id/getscore"
+            android:text="GET SCORE"
+            android:background="@drawable/back_button_yellow"/>
+
+        <RelativeLayout
+            android:id="@+id/l"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:background="#212121"
+                android:id="@+id/cancel"
+                android:layout_height="match_parent"
+                android:alpha=".5"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/log"
+                android:layout_centerInParent="true"
+                android:layout_margin="16sp"
+                android:text="Logout"
+                android:background="@drawable/back_login_bottom"
+                />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

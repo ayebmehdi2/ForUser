@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Scanner</string>
+    <string name="title_activity_home">Home</string>
+    <string name="scanny">Scanny</string>
+
+    <string name="no_disponible">Non disponible</string>
+
+        <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+        <string name="facebook_application_id" translatable="false">2537046406582731</string>
+        <string name="facebook_login_protocol_scheme" translatable="false">fb2537046406582731</string>
+    <string name="entrez_une_valeur_ici">Entrez une valeur ici</string>
+    <string name="annuler">annuler</string>
+    <string name="faire">faire</string>
+
+    <string-array name="tunisie">
+        <item>Choisissez adress</item>
+        <item>Ariana</item>
+        <item>Béja</item>
+        <item>Ben Arous</item>
+        <item>Bizerte</item>
+        <item>Gabès</item>
+        <item>Gafsa</item>
+        <item>Jendouba</item>
+        <item>Kairouan</item>
+        <item>Kasserine</item>
+        <item>Kébili</item>
+        <item>Kef</item>
+        <item>Mahdia</item>
+        <item>Manouba</item>
+        <item>Médnine</item>
+        <item>Montastir</item>
+        <item>Nabeul</item>
+        <item>Sfax</item>
+        <item>Sidi bouzid</item>
+        <item>Siliana</item>
+        <item>Sousse</item>
+        <item>Tataouine</item>
+        <item>Tozeur</item>
+        <item>Tunis</item>
+        <item>Zaghouan</item>
+    </string-array>
+
+</resources>

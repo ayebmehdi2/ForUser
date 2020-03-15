@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="#F1F1F1"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:paddingBottom="80dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="#FFF"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:src="@drawable/prof"
+                        android:id="@+id/photo"
+                        android:scaleType="centerCrop"
+                        android:layout_width="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="120dp"
+                        android:layout_margin="46dp"/>
+
+
+
+                    <ImageView
+                        android:layout_width="62dp"
+                        android:id="@+id/back"
+                        android:padding="16dp"
+                        android:layout_height="62dp"
+                        android:src="@drawable/ic_keyboard_backspace_black_24dp"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/nom"
+                    android:background="#FFF">
+                    <TextView
+                        android:text="Name"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:textSize="12sp"
+                        android:textColor="#9E9E9E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        tools:text="Mehdi"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="16sp"
+                        android:id="@+id/name_t"
+                        android:textColor="#212121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/prenom"
+                    android:background="#FFF">
+                    <TextView
+                        android:text="Prenom"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:textSize="12sp"
+                        android:textColor="#9E9E9E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        tools:text="Ayeb"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="16sp"
+                        android:id="@+id/prenom_t"
+                        android:textColor="#212121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="1dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/email"
+                    android:background="#FFF">
+                    <TextView
+                        android:text="Email"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:textSize="12sp"
+                        android:textColor="#9E9E9E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        tools:text="mehdiayeb14@gmai.com"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:id="@+id/email_t"
+                        android:textSize="16sp"
+                        android:textColor="#212121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="1dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/tele"
+                    android:background="#FFF">
+                    <TextView
+                        android:text="Telephone"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:textSize="12sp"
+                        android:textColor="#9E9E9E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        tools:text="56562389"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="16sp"
+                        android:id="@+id/tele_t"
+                        android:textColor="#212121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="1dp"
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:background="#FFF">
+                    <TextView
+                        android:text="date of birth"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:textSize="12sp"
+                        android:textColor="#9E9E9E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        tools:text="14 / 12 / 2002"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="16sp"
+                        android:textColor="#212121"
+                        android:id="@+id/date_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal"
+                    android:background="#FFF">
+                    <TextView
+                        android:text="Adress"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:textSize="12sp"
+                        android:textColor="#9E9E9E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <Spinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_height="match_parent"
+                        android:entries="@array/tunisie"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/logout"
+                    android:layout_marginTop="16sp"
+                    android:background="#FFF">
+                    <TextView
+                        android:text="Logout"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/up"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#212121"
+                android:alpha=".5"/>
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16sp"
+                android:background="#F5F5F5"
+                android:layout_margin="16sp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    tools:text="Name"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:textSize="16sp"
+                    android:id="@+id/update_title"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16sp"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/edt"
+                    android:paddingEnd="16dp"
+                    android:hint="@string/entrez_une_valeur_ici"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp">
+                    <Button
+                        android:textColor="#FFF"
+                        android:textSize="12sp"
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/annuler"
+                        android:background="@drawable/back_button_yellow"/>
+                    <Button
+                        android:textColor="#FFF"
+                        android:id="@+id/done"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faire"
+                        android:background="@drawable/back_button_yellow"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</layout>
