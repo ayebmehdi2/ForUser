@@ -21,7 +21,6 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="128dp"
-            android:fontFamily="@font/titan_one"
             android:text="Bienvenue"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="#FFE8BE" />

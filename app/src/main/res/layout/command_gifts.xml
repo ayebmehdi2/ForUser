@@ -1,8 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:background="#EEE"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</LinearLayout>
+        <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="62dp"
+                android:id="@+id/back"
+                android:padding="16dp"
+                android:layout_height="62dp"
+                android:src="@drawable/ic_keyboard_backspace_black_24dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trouvez boutique"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_margin="16sp"/>
+        </LinearLayout>
+        -->
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:id="@+id/etat"
+            android:layout_height="wrap_content"
+            android:padding="16sp"
+            android:entries="@array/tunisie"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/boutiquis"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/empty"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_shop"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non boutique ici"
+                android:layout_marginTop="16dp"
+                android:textColor="#212121"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginBottom="16sp"
+            android:layout_marginStart="16dp"
+            android:id="@+id/command"
+            android:textColor="#FFF"
+            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_button_yellow"
+            android:text="command"/>
+
+
+
+    </LinearLayout>
+</layout>

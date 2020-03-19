@@ -1,6 +1,6 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Scanner</string>
-    <string name="title_activity_home">Home</string>
+    <string name="title_activity_home" tools:ignore="ExtraTranslation">Home</string>
     <string name="scanny">Scanny</string>
 
     <string name="no_disponible">Non disponible</string>
@@ -13,7 +13,7 @@
     <string name="faire">faire</string>
 
     <string-array name="tunisie">
-        <item>Choisissez adress</item>
+        <item>Choisissez etat</item>
         <item>Ariana</item>
         <item>Béja</item>
         <item>Ben Arous</item>

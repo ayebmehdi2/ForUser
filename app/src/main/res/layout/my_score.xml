@@ -4,21 +4,12 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
+        android:background="#EEE"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/a" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#212121"
-            android:alpha=".4"/>
+
+
 
         <LinearLayout
             android:orientation="vertical"
@@ -26,11 +17,12 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:elevation="4dp"
                 android:id="@+id/a"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:padding="10dp"
-                android:layout_marginTop="16dp"
+                android:padding="15dp"
+                android:background="@color/colorPrimary"
                 android:layout_height="wrap_content">
 
                 <View
@@ -43,6 +35,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Score  "
+                    android:textSize="18sp"
+                    android:textStyle="bold"
                     android:textColor="#FFF"/>
 
                 <TextView
@@ -50,6 +44,7 @@
                     android:layout_height="wrap_content"
                     android:text="0"
                     android:id="@+id/score"
+                    android:textStyle="bold"
                     android:textSize="18sp"
                     android:layout_marginStart="16dp"
                     android:textColor="#FFF"/>
@@ -65,12 +60,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Gifts  "
+                    android:textStyle="bold"
+                    android:textSize="18sp"
                     android:textColor="#FFF"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
+                    android:textStyle="bold"
                     android:textSize="18sp"
                     android:id="@+id/gifts"
                     android:layout_marginStart="16dp"
@@ -93,6 +91,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:background="@drawable/back_move"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginTop="16dp"
@@ -121,6 +120,7 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:text="get"
+                        android:layout_marginEnd="16sp"
                         android:id="@+id/gift1"
                         android:textColor="#FFF"
                         android:background="@drawable/back_button_yellow"
@@ -131,6 +131,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
+                    android:background="@drawable/back_move"
                     android:layout_marginTop="16dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
@@ -158,6 +159,7 @@
                         android:layout_width="wrap_content"
                         android:text="get"
                         android:id="@+id/gift2"
+                        android:layout_marginEnd="16dp"
                         android:textColor="#FFF"
                         android:background="@drawable/back_button_yellow"
                         android:layout_height="40dp"/>
@@ -167,12 +169,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
+                    android:background="@drawable/back_move"
                     android:layout_marginTop="16dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="70dp"
+
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_gift"
                         android:padding="20dp"/>
@@ -194,6 +198,7 @@
                         android:layout_width="wrap_content"
                         android:text="get"
                         android:id="@+id/gift3"
+                        android:layout_marginEnd="16dp"
                         android:textColor="#FFF"
                         android:background="@drawable/back_button_yellow"
                         android:layout_height="40dp"/>

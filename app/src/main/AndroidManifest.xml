@@ -14,21 +14,56 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".Home"/>
+            android:name=".ACTIVITY.Home"/>
         <activity
-            android:name=".SplachScreen">
+            android:name=".ACTIVITY.SplachScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".ActivityAuth"/>
-        <activity android:name=".CompleteCompte"/>
-        <activity android:name=".ActivityProfile"/>
-        <activity android:name=".MyScore"/>
-        <activity android:name=".MyGifts"/>
-        <activity android:name=".UnityHolderPlayer"/>
+        <activity android:name=".ACTIVITY.ActivityAuth"/>
+
+        <activity android:name=".ACTIVITY.CompleteCompte"/>
+
+        <activity android:name=".ACTIVITY.ActivityProfile"/>
+
+        <activity android:name=".ACTIVITY.MyScore"
+            android:theme="@style/AppThemeD"
+            android:label="My score" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ACTIVITY.Home" />
+        </activity>
+
+        <activity android:name=".ACTIVITY.MyGifts"
+            android:theme="@style/AppThemeD"
+            android:label="My gifts" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ACTIVITY.Home" />
+        </activity>
+
+        <activity android:name=".ACTIVITY.UnityHolderPlayer"/>
+
+        <activity android:name=".ACTIVITY.CommandGift"
+            android:theme="@style/AppThemeD"
+            android:label="Command gift" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ACTIVITY.MyGifts" />
+        </activity>
+
+
+        <activity android:name=".ACTIVITY.ShowImage"
+            android:theme="@style/AppThemeD"
+            android:label="Qr code" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ACTIVITY.MyGifts" />
+        </activity>
+
     </application>
 
 
