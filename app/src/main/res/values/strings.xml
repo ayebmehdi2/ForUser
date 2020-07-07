@@ -11,9 +11,25 @@
     <string name="entrez_une_valeur_ici">Entrez une valeur ici</string>
     <string name="annuler">annuler</string>
     <string name="faire">faire</string>
+    <string name="mon_score">mon score</string>
+    <string name="avatar">Decovrir Voter AVATAR</string>
+    <string name="obtenir_score">obtenir point</string>
+    <string name="mes_cadeaux">mes cadeaux</string>
+    <string name="email_optionnel">Email (optionnel)</string>
+    <string name="prenom">Prenom</string>
+    <string name="nom">Nom</string>
+    <string name="mon_profil">mon profil</string>
+    <string name="date_de_naissance_optionnel">Date de naissance (optionnel)</string>
+    <string name="t_l_phone_optionnel">téléphone (optionnel)</string>
+    <string name="cadeaux_1_par_200_point">cadeaux 1 par 200 point</string>
+    <string name="cadeaux_3_par_100_point">cadeaux 3 par 100 point</string>
+    <string name="cadeaux_2_par_150_point">cadeaux 2 par 150 point</string>
+    <string name="obtenir">obtenir</string>
+    <string name="d_connexion">Déconnexion</string>
+    <string name="bienvenue">Bienvenue</string>
 
     <string-array name="tunisie">
-        <item>Choisissez etat</item>
+        <item>Choisissez gouvernourat</item>
         <item>Ariana</item>
         <item>Béja</item>
         <item>Ben Arous</item>
@@ -39,5 +55,8 @@
         <item>Tunis</item>
         <item>Zaghouan</item>
     </string-array>
+
+    <string name="key">AIzaSyA9RMPIQAeDwVgrpL_T4aLCHyBYQw8OZcc</string>
+
 
 </resources>

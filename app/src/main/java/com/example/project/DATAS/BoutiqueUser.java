@@ -1,16 +1,32 @@
 package com.example.project.DATAS;
 
-
 public class BoutiqueUser {
 
-    private String uid, name, photo, wilaya, des;
+    private String uid, name, photo, des, lon, lat;
 
-    public BoutiqueUser(String uid, String name, String photo, String wilaya, String des) {
+    public BoutiqueUser(String uid, String name, String photo, String des, String lat, String lon) {
         this.uid = uid;
         this.name = name;
         this.photo = photo;
-        this.wilaya = wilaya;
         this.des = des;
+        this.lat = lat;
+        this.lon = lon;
+    }
+
+    public String getLat() {
+        return lat;
+    }
+
+    public String getLon() {
+        return lon;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public void setLon(String lon) {
+        this.lon = lon;
     }
 
     public BoutiqueUser() {
@@ -28,9 +44,6 @@ public class BoutiqueUser {
         this.photo = photo;
     }
 
-    public void setWilaya(String wilaya) {
-        this.wilaya = wilaya;
-    }
 
     public void setDes(String des) {
         this.des = des;
@@ -48,9 +61,6 @@ public class BoutiqueUser {
         return photo;
     }
 
-    public String getWilaya() {
-        return wilaya;
-    }
 
     public String getDes() {
         return des;

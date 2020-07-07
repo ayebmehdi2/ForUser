@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:padding="15dp"
-                android:background="@color/colorPrimary"
+                android:background="#169FD7"
                 android:layout_height="wrap_content">
 
                 <View
@@ -34,8 +34,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Score  "
-                    android:textSize="18sp"
+                    android:text="@string/mon_score"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="#FFF"/>
 
@@ -59,9 +59,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gifts  "
+                    android:text="@string/mes_cadeaux"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textColor="#FFF"/>
 
                 <TextView
@@ -91,7 +91,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:background="@drawable/back_move"
+                    android:background="@drawable/back_button_yellow"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginTop="16dp"
@@ -109,8 +109,8 @@
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
                         android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:text="Gift 1 par 200 point"/>
+                        android:textSize="14sp"
+                        android:text="@string/cadeaux_1_par_200_point"/>
 
                     <View
                         android:layout_width="0dp"
@@ -119,11 +119,12 @@
 
                     <Button
                         android:layout_width="wrap_content"
-                        android:text="get"
-                        android:layout_marginEnd="16sp"
+                        android:text="@string/obtenir"
+                        android:layout_marginEnd="12sp"
                         android:id="@+id/gift1"
                         android:textColor="#FFF"
-                        android:background="@drawable/back_button_yellow"
+                        android:textAllCaps="false"
+                        android:background="@drawable/back_login_bottom"
                         android:layout_height="40dp"/>
 
                 </LinearLayout>
@@ -131,7 +132,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="@drawable/back_move"
+                    android:background="@drawable/back_button_yellow"
                     android:layout_marginTop="16dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
@@ -147,8 +148,8 @@
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
                         android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:text="Gift 2 par 150 point"/>
+                        android:textSize="14sp"
+                        android:text="@string/cadeaux_2_par_150_point"/>
 
                     <View
                         android:layout_width="0dp"
@@ -157,11 +158,13 @@
 
                     <Button
                         android:layout_width="wrap_content"
-                        android:text="get"
+                        android:text="@string/obtenir"
                         android:id="@+id/gift2"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginEnd="14dp"
                         android:textColor="#FFF"
-                        android:background="@drawable/back_button_yellow"
+                        android:textSize="12sp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/back_login_bottom"
                         android:layout_height="40dp"/>
 
                 </LinearLayout>
@@ -169,7 +172,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="@drawable/back_move"
+                    android:background="@drawable/back_button_yellow"
                     android:layout_marginTop="16dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
@@ -186,8 +189,8 @@
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
                         android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:text="Gift 3 par 100 point"/>
+                        android:textSize="14sp"
+                        android:text="@string/cadeaux_3_par_100_point"/>
 
                     <View
                         android:layout_width="0dp"
@@ -196,11 +199,13 @@
 
                     <Button
                         android:layout_width="wrap_content"
-                        android:text="get"
+                        android:text="@string/obtenir"
                         android:id="@+id/gift3"
                         android:layout_marginEnd="16dp"
                         android:textColor="#FFF"
-                        android:background="@drawable/back_button_yellow"
+                        android:textAllCaps="false"
+                        android:textSize="12sp"
+                        android:background="@drawable/back_login_bottom"
                         android:layout_height="40dp"/>
 
                 </LinearLayout>

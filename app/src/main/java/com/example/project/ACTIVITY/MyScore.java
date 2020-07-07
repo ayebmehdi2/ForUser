@@ -101,7 +101,7 @@ public class MyScore extends AppCompatActivity {
                         Date result = new Date(System.currentTimeMillis());
                         String time = simple.format(result);
                         String qrCode = "gift1--" + new Random().nextInt(1000000000);
-                        GIFT g = new GIFT(user.getName(), "Gift 1", "Non commande", qrCode, "", time);
+                        GIFT g = new GIFT(uid, user.getName(), "Cadeaux 1", "Non commande", qrCode, "", time);
                         new AsyncT().execute(g);
                     }else {
                         Toast.makeText(MyScore.this, "Le score insuffisant !", Toast.LENGTH_LONG).show();
@@ -150,7 +150,7 @@ public class MyScore extends AppCompatActivity {
                         Date result = new Date(System.currentTimeMillis());
                         String time = simple.format(result);
                         String qrCode = "gift2--" + new Random().nextInt(1000000000);
-                        GIFT g = new GIFT(user.getName(), "Gift 2", "Non commande", qrCode, "", time);
+                        GIFT g = new GIFT(uid, user.getName(), "Cadeaux 2", "Non commande", qrCode, "", time);
                         new AsyncT().execute(g);
                     }else {
                         Toast.makeText(MyScore.this, "Le score insuffisant !", Toast.LENGTH_LONG).show();
@@ -202,7 +202,7 @@ public class MyScore extends AppCompatActivity {
                         Date result = new Date(System.currentTimeMillis());
                         String time = simple.format(result);
                         String qrCode = "gift3--" + new Random().nextInt(1000000000);
-                        GIFT g = new GIFT(user.getName(), "Gift 3", "Non commande", qrCode, "", time);
+                        GIFT g = new GIFT(uid, user.getName(), "Cadeaux 3", "Non commande", qrCode, "", time);
                         new AsyncT().execute(g);
                     }else {
                         Toast.makeText(MyScore.this, "Le score insuffisant !", Toast.LENGTH_LONG).show();

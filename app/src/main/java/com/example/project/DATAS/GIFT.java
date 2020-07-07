@@ -2,18 +2,27 @@ package com.example.project.DATAS;
 
 public class GIFT {
 
-    private String username, type, status, qr_code, qr_img, time;
+    private String uid, username, type, status, qr_code, qr_img, time;
 
     public GIFT() {
     }
 
-    public GIFT(String username , String type, String status, String qr_code, String qr_img, String time) {
+    public GIFT(String uid, String username , String type, String status, String qr_code, String qr_img, String time) {
         this.username = username;
         this.type = type;
         this.status = status;
         this.qr_code = qr_code;
         this.qr_img = qr_img;
         this.time = time;
+        this.uid = uid;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getTime() {

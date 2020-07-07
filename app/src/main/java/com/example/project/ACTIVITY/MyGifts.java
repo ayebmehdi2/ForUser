@@ -33,6 +33,7 @@ public class MyGifts extends AppCompatActivity implements AdapterGifts.click {
     DatabaseReference reference;
     String uid;
     private AdapterGifts giftsAdapter;
+    private  ValueEventListener valueEventListener;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,18 +56,22 @@ public class MyGifts extends AppCompatActivity implements AdapterGifts.click {
         binding.rec.setHasFixedSize(true);
         binding.rec.setAdapter(giftsAdapter);
         ArrayList<GIFT> gifts = new ArrayList<>();
-        ValueEventListener valueEventListener = new ValueEventListener() {
+         valueEventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    GIFT g = snapshot.getValue(GIFT.class);
-                    gifts.add(g);
-                }
 
-                if (!(gifts.size() > 0)){
+                giftsAdapter.swapAdapter(null);
+                gifts.clear();
+
+                if (!(dataSnapshot.getChildrenCount() > 0)){
                     binding.rec.setVisibility(View.GONE);
                     binding.empty.setVisibility(View.VISIBLE);
                     return;
+                }
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    GIFT g = snapshot.getValue(GIFT.class);
+                    gifts.add(g);
                 }
 
                 binding.empty.setVisibility(View.GONE);
@@ -80,9 +85,20 @@ public class MyGifts extends AppCompatActivity implements AdapterGifts.click {
             }
         };
 
-        reference.child("USERS").child(uid).child("myGifts").addListenerForSingleValueEvent(valueEventListener);
 
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        reference.child("USERS").child(uid).child("myGifts").addValueEventListener(valueEventListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        reference.child("USERS").child(uid).child("myGifts").removeEventListener(valueEventListener);
     }
 
     @Override
@@ -92,8 +108,8 @@ public class MyGifts extends AppCompatActivity implements AdapterGifts.click {
 
     @Override
     public void command(GIFT g) {
-        Intent i = new Intent(this, CommandGift.class);
-        CommandGift.gif = g;
+        Intent i = new Intent(this, CommandGiftMap.class);
+        CommandGiftMap.gif = g;
         startActivity(i);
     }
 

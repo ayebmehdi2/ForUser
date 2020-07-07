@@ -34,12 +34,13 @@
 
                 <TextView
                     android:id="@+id/time"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="16dp"
                     android:layout_width="wrap_content"
                     android:textAllCaps="true"
                     android:layout_height="wrap_content"
                     android:textColor="#757575"
-                    android:textSize="14sp"
+                    android:textSize="10sp"
                     tools:text="14 12 2002 90:20"/>
 
             </LinearLayout>
@@ -47,8 +48,8 @@
                 android:id="@+id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#616161"
-                android:textSize="12sp"
+                android:textColor="#757575"
+                android:textSize="10sp"
                 tools:text="Gift 1 par 200 point"/>
         </LinearLayout>
 
@@ -59,19 +60,19 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
+        android:paddingEnd="16dp"
         android:gravity="center_vertical"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <Button
-            android:layout_width="80dp"
+            android:layout_width="70dp"
             android:text="Commond"
             android:textSize="10sp"
             android:visibility="gone"
             android:id="@+id/commond"
             android:textColor="#FFF"
-            android:layout_marginEnd="16sp"
             android:background="@drawable/back_button_yellow"
-            android:layout_height="40dp"/>
+            android:layout_height="38dp"/>
         <ImageView
             android:layout_width="50dp"
             android:text="Commond"
@@ -79,7 +80,6 @@
             android:visibility="gone"
             android:id="@+id/qr"
             android:src="@drawable/ic_qr_code"
-            android:layout_marginEnd="16sp"
             android:layout_height="50dp"/>
     </LinearLayout>
 </LinearLayout>

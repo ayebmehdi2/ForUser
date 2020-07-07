@@ -144,7 +144,7 @@ public class Home extends AppCompatActivity {
 
                                     }
                                 });
-                            }else {
+                            } else {
                                 Toast.makeText(Home.this, "Le papier n'est pas disponible pour nous !", Toast.LENGTH_LONG).show();
                             }
                         }
@@ -165,8 +165,6 @@ public class Home extends AppCompatActivity {
     public void upDateData(User user, String s){
 
         Integer score = user.getScore();
-        score = score + 25;
-        reference.child("USERS").child(uid).child("score").setValue(score);
 
         Integer p1 = user.getProd1();
         Integer p2 = user.getProd2();
@@ -176,27 +174,39 @@ public class Home extends AppCompatActivity {
 
         switch (s.substring(0, 8)){
             case "produit1" :
+                // yaourt fruits
                 p1 = p1 + 1;
+                score = score + 30;
                 reference.child("USERS").child(uid).child("prod1").setValue(p1);
                 break;
             case "produit2" :
+                // yaourt Vanille
                 p2 = p2 + 1;
+                score = score + 30;
                 reference.child("USERS").child(uid).child("prod2").setValue(p2);
                 break;
             case "produit3" :
+                // Vitup brasse
                 p3 = p3 + 1;
+                score = score + 20;
                 reference.child("USERS").child(uid).child("prod3").setValue(p3);
                 break;
             case "produit4" :
+                // Bifi
                 p4 = p4 + 1;
+                score = score + 25;
                 reference.child("USERS").child(uid).child("prod4").setValue(p4);
                 break;
             case "produit5" :
+                // Dolce
                 p5 = p5 + 1;
+                score = score + 30;
                 reference.child("USERS").child(uid).child("prod5").setValue(p5);
                 break;
 
         }
+
+        reference.child("USERS").child(uid).child("score").setValue(score);
 
         reference.child("STATISTIQUE").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

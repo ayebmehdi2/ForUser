@@ -29,6 +29,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -70,11 +71,13 @@ public class CompleteCompte extends AppCompatActivity {
 
         if (user == null) return;
 
-
         if (user.getDisplayName() != null){
             binding.name.setText(user.getDisplayName().split(" ")[0]);
-            binding.prenom.setText(user.getDisplayName().split(" ")[1]);
+            if (user.getDisplayName().split(" ").length > 1){
+                binding.prenom.setText(user.getDisplayName().split(" ")[1]);
+            }
         }
+
         if (user.getEmail() != null)binding.email.setText(user.getEmail());
         if (user.getPhoneNumber() != null)binding.tele.setText(user.getPhoneNumber());
         if (user.getPhotoUrl() != null){
@@ -98,6 +101,19 @@ public class CompleteCompte extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 PD.show();
+
+                String nom = binding.name.getText().toString();
+                if (!(nom.length() > 0)){
+                    Toast.makeText(CompleteCompte.this, "nom !", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                String prenom = binding.prenom.getText().toString();
+                if (!(prenom.length() > 0)){
+                    Toast.makeText(CompleteCompte.this, "prenom !", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
                 reference.child("STATISTIQUE").child("comptes").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -108,6 +124,8 @@ public class CompleteCompte extends AppCompatActivity {
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) { }
                 });
+
+
                 if (pathImage != null){
                     uploadImage(pathImage);
                 }else {
@@ -119,11 +137,19 @@ public class CompleteCompte extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, ActivityAuth.class));
+    }
+
     public void mouve(String uri){
         reference.child("USERS").child(uid).child("photoUrl").setValue(uri);
         uploadData();
         user = null;
         PD.dismiss();
+        FirebaseMessaging.getInstance().subscribeToTopic(uid).addOnSuccessListener(aVoid ->
+                Toast.makeText(getApplicationContext(),"Subscribe Success",Toast.LENGTH_LONG).show());
         Intent intent = new Intent(CompleteCompte.this, Home.class);
         startActivity(intent);
     }
@@ -143,18 +169,10 @@ public class CompleteCompte extends AppCompatActivity {
     }
 
     public void uploadData(){
-        String nom = binding.name.getText().toString();
-        if (!(nom.length() > 0)){
-            Toast.makeText(CompleteCompte.this, "nom !", Toast.LENGTH_LONG).show();
-            return;
-        }
-        reference.child("USERS").child(uid).child("name").setValue(nom);
 
+        String nom = binding.name.getText().toString();
+        reference.child("USERS").child(uid).child("name").setValue(nom);
         String prenom = binding.prenom.getText().toString();
-        if (!(prenom.length() > 0)){
-            Toast.makeText(CompleteCompte.this, "prenom !", Toast.LENGTH_LONG).show();
-            return;
-        }
         reference.child("USERS").child(uid).child("prenom").setValue(prenom);
 
         String email = binding.email.getText().toString();

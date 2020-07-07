@@ -54,17 +54,15 @@ public class AdapterGifts extends RecyclerView.Adapter<AdapterGifts.holder> {
         if (gift.getStatus().equals("Non commande")){
             holder.command.setVisibility(View.VISIBLE);
             holder.qr.setVisibility(View.GONE);
-        }
-
-        if (gift.getStatus().equals("En attente")){
+        } else if (gift.getStatus().equals("Recu")){
+            holder.command.setVisibility(View.GONE);
+            holder.qr.setVisibility(View.GONE);
+        } else {
             holder.command.setVisibility(View.GONE);
             holder.qr.setVisibility(View.VISIBLE);
         }
 
-        if (gift.getStatus().equals("Recu")){
-            holder.command.setVisibility(View.GONE);
-            holder.qr.setVisibility(View.GONE);
-        }
+
 
     }
 

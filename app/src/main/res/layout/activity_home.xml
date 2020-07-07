@@ -4,24 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="#F5F5F5"
+        android:background="@drawable/back_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ACTIVITY.Home">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/a" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#212121"
-            android:alpha=".4"/>
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="45dp"
@@ -33,18 +22,30 @@
             android:layout_gravity="end"
             android:layout_height="45dp"/>
 
-        <Button
-            android:layout_width="200dp"
-            android:id="@+id/avatar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@drawable/vitalait"
+            app:layout_constraintBottom_toTopOf="@+id/avatar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_height="200dp"
-            android:text="AVATAR"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mygifts" />
+
+        <Button
+            android:id="@+id/avatar"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/back_button_yellow"
+            android:text="@string/avatar"
             android:textColor="#FFF"
-            android:textSize="20sp"
-            android:background="@drawable/back_login_bottom"/>
+            android:textSize="19sp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/getscore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
 
         <Button
             app:layout_constraintStart_toStartOf="parent"
@@ -53,21 +54,23 @@
             android:textColor="#FFF"
             android:layout_margin="16dp"
             android:id="@+id/myscore"
-            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textSize="12sp"
             android:textStyle="bold"
             android:layout_height="45dp"
-            android:text="my score"
-            android:background="@drawable/back_button_yellow"
+            android:text="@string/mon_score"
+            android:background="@drawable/back_login_bottom"
             />
 
         <Button
             android:id="@+id/mygifts"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
-            android:background="@drawable/back_button_yellow"
-            android:text="my gifts"
+            android:background="@drawable/back_login_bottom"
+            android:text="@string/mes_cadeaux"
             android:textColor="#FFF"
-            android:textSize="14sp"
+            android:textSize="12sp"
+            android:textAllCaps="false"
             android:layout_marginStart="16dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/myscore"
@@ -78,15 +81,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="40dp"
             android:layout_width="160dp"
             android:textColor="#FFF"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:padding="16dp"
             android:layout_height="60dp"
             android:id="@+id/getscore"
-            android:text="GET SCORE"
-            android:background="@drawable/back_button_yellow"/>
+            android:text="@string/obtenir_score"
+            android:background="@drawable/back_login_bottom"/>
 
         <RelativeLayout
             android:id="@+id/l"
@@ -110,7 +113,19 @@
                 android:text="Logout"
                 android:background="@drawable/back_login_bottom"
                 />
+
         </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="copyright © 2020 InnoNouve all rights reserved"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="8dp"
+            android:textColor="#616161"
+            android:textSize="12sp"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

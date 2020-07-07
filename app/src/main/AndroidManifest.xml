@@ -7,9 +7,9 @@
     <application
         android:allowBackup="true"
         tools:replace="android:icon,android:theme"
-        android:icon="@drawable/ic_qr"
+        android:icon="@drawable/vitalait"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_qr"
+        android:roundIcon="@drawable/vitalait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
@@ -31,7 +31,7 @@
 
         <activity android:name=".ACTIVITY.MyScore"
             android:theme="@style/AppThemeD"
-            android:label="My score" >
+            android:label="@string/mon_score" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ACTIVITY.Home" />
@@ -39,7 +39,7 @@
 
         <activity android:name=".ACTIVITY.MyGifts"
             android:theme="@style/AppThemeD"
-            android:label="My gifts" >
+            android:label="@string/mes_cadeaux" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ACTIVITY.Home" />
@@ -47,22 +47,31 @@
 
         <activity android:name=".ACTIVITY.UnityHolderPlayer"/>
 
-        <activity android:name=".ACTIVITY.CommandGift"
-            android:theme="@style/AppThemeD"
-            android:label="Command gift" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ACTIVITY.MyGifts" />
-        </activity>
-
 
         <activity android:name=".ACTIVITY.ShowImage"
             android:theme="@style/AppThemeD"
-            android:label="Qr code" >
+            android:label="Code QR" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ACTIVITY.MyGifts" />
         </activity>
+
+        <activity android:name=".ACTIVITY.CommandGiftMap"
+            android:theme="@style/AppTheme"/>
+
+        <service
+            android:name=".NotificationService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/key" />
 
     </application>
 

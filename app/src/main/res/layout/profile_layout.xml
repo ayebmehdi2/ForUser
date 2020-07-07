@@ -41,6 +41,7 @@
                     <ImageView
                         android:layout_width="62dp"
                         android:id="@+id/back"
+                        android:background="@drawable/select_adapt"
                         android:padding="16dp"
                         android:layout_height="62dp"
                         android:src="@drawable/ic_keyboard_backspace_black_24dp"/>
@@ -54,9 +55,9 @@
                     android:layout_height="50dp"
                     android:orientation="horizontal"
                     android:id="@+id/nom"
-                    android:background="#FFF">
+                    android:background="@drawable/select_adapt">
                     <TextView
-                        android:text="Name"
+                        android:text="Nom"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="16dp"
                         android:textSize="12sp"
@@ -84,7 +85,7 @@
                     android:layout_marginTop="1dp"
                     android:orientation="horizontal"
                     android:id="@+id/prenom"
-                    android:background="#FFF">
+                    android:background="@drawable/select_adapt">
                     <TextView
                         android:text="Prenom"
                         android:layout_gravity="center_vertical"
@@ -116,7 +117,7 @@
                     android:layout_height="50dp"
                     android:orientation="horizontal"
                     android:id="@+id/email"
-                    android:background="#FFF">
+                    android:background="@drawable/select_adapt">
                     <TextView
                         android:text="Email"
                         android:layout_gravity="center_vertical"
@@ -148,7 +149,7 @@
                     android:layout_height="50dp"
                     android:orientation="horizontal"
                     android:id="@+id/tele"
-                    android:background="#FFF">
+                    android:background="@drawable/select_adapt">
                     <TextView
                         android:text="Telephone"
                         android:layout_gravity="center_vertical"
@@ -179,9 +180,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:orientation="horizontal"
-                    android:background="#FFF">
+                    android:background="@drawable/select_adapt">
                     <TextView
-                        android:text="date of birth"
+                        android:text="date de naissance"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="16dp"
                         android:textSize="12sp"
@@ -208,9 +209,9 @@
                     android:layout_height="50dp"
                     android:layout_marginTop="1dp"
                     android:orientation="horizontal"
-                    android:background="#FFF">
+                    android:background="@drawable/select_adapt">
                     <TextView
-                        android:text="Adress"
+                        android:text="Adresse"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="16dp"
                         android:textSize="12sp"
@@ -238,9 +239,9 @@
                     android:orientation="horizontal"
                     android:id="@+id/logout"
                     android:layout_marginTop="16sp"
-                    android:background="#FFF">
+                    android:background="@drawable/select_adapt">
                     <TextView
-                        android:text="Logout"
+                        android:text="@string/d_connexion"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="16dp"
                         android:textSize="16sp"

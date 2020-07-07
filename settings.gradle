@@ -1,2 +1,2 @@
-include ':app', ':Avatar_AR', ':VuforiaWrapper'
+include ':app', ':Avatar', ':VuforiaWrapper'
 rootProject.name='project'

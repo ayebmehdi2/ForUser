@@ -4,7 +4,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="#EEE"
+        android:background="#FFF"
         android:layout_height="match_parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -31,7 +31,7 @@
                 android:id="@+id/name"
                 android:inputType="text"
                 android:layout_marginEnd="16dp"
-                android:hint="Nom "
+                android:hint="@string/nom"
                 android:paddingStart="16dp"
                 android:layout_height="50dp"/>
 
@@ -40,7 +40,7 @@
                 android:layout_weight="1"
                 android:inputType="text"
                 android:id="@+id/prenom"
-                android:hint="Prenom "
+                android:hint="@string/prenom"
                 android:paddingStart="16dp"
                 android:layout_height="50dp"/>
         </LinearLayout>
@@ -52,7 +52,7 @@
             android:layout_marginEnd="16dp"
             android:inputType="textEmailAddress"
             android:id="@+id/email"
-            android:hint="Email (optional)"
+            android:hint="@string/email_optionnel"
             android:paddingStart="16dp"
             android:layout_height="50dp"/>
 
@@ -63,7 +63,7 @@
             android:layout_marginEnd="16dp"
             android:id="@+id/tele"
             android:inputType="number"
-            android:hint="Phone number (optional)"
+            android:hint="@string/t_l_phone_optionnel"
             android:paddingStart="16dp"
             android:layout_height="50dp"/>
 
@@ -74,7 +74,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:inputType="date"
-            android:hint="Date of birth (optional)"
+            android:hint="@string/date_de_naissance_optionnel"
             android:paddingStart="16dp"
             android:layout_height="50dp"/>
 
@@ -96,7 +96,8 @@
             android:textColor="#FFF"
             android:textStyle="bold"
             android:id="@+id/done"
-            android:text="My profile"
+            android:text="@string/mon_profil"
+            android:textAllCaps="false"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/back_button_yellow"

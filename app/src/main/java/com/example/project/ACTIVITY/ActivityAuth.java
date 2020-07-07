@@ -6,11 +6,9 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.project.R;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,7 +18,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -46,7 +43,20 @@ public class ActivityAuth extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 final FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null){
-                    startActivity(new Intent(ActivityAuth.this, Home.class));
+                    reference.child("USERS").addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.hasChild(user.getUid())){
+                                startActivity(new Intent(ActivityAuth.this, Home.class));
+                            }else {
+                                CompleteCompte.user = user;
+                                startActivity(new Intent(ActivityAuth.this, CompleteCompte.class));
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) { }
+                    });
                 }else {
                     signIn();
                 }
@@ -58,8 +68,7 @@ public class ActivityAuth extends AppCompatActivity {
     public void signIn(){
         Log.d("SignUpActivity", "user null");
         List<AuthUI.IdpConfig> providers = Arrays.asList(
-                new AuthUI.IdpConfig.GoogleBuilder().build(),
-                new AuthUI.IdpConfig.FacebookBuilder().build());
+                new AuthUI.IdpConfig.GoogleBuilder().build());
 
         startActivityForResult(
                 AuthUI.getInstance()
